@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --orange: #D2872C;
+    --gray: #766F68;
+    --background: #fff; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    background-color: var(--background);
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background);
+    height: 5vh;
+    padding: 4%;
+}
+
+nav .logo a {
+    font-size: 3em;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--orange);
+    opacity: 0.9;
+}
+
+nav .logo a:link {
+    color: var(--orange)
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li {
+    margin-left: 32px;
+}
+
+.nav-list li a{
+    font-size: 2em;
+    text-decoration: none;
+    color: var(--gray);
+    font-weight: 500;
+    transition: .6ms ease;
+}
+
+.nav-list li a:hover {
+    border-bottom: 2px solid var(--orange);
+}
+
+
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div  {
+    width: 32px;
+    height: 3px;
+    background-color: var(--gray);
+    margin: 8px;
+}
+
+#btn-change-theme {
+    color: var(--gray);
+    font-size: 2em;
+    transition: 300ms ease;
+}
+
+#btn-change-theme:hover {
+    cursor: pointer;
+    color: var(--orange);
+}
+
+.container {
+    display: grid;
+    height: max-content;
+    grid-template-areas: 
+        "main aside";
+    grid-template-rows: 2fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 5% 8.5% 0 8.5;
+}
+
+.container .main-content h1 {
+    
+    font-size: 5.5em;
+    color: var(--gray);
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.container .main-content p {
+    font-size: 2.25em;
+    color: var(--gray);
+    margin-bottom: 28px;
+    padding: 5px;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.container .main-content .btn-start-now {
+    width: 250px;
+    font-size: 1.8em;
+    font-weight: 600;
+    padding: 18px;
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    transition: 300ms ease;
+}
+
+.container .main-content .btn-start-now:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.container .box-image {
+    position: relative;
+}
+
+.container .box-image img {
+    width: 600px;
+    position: absolute;
+    top: 50px;
+    left: -100px;
+}
+
+.footer {
+    grid-area: footer;
+}
+
