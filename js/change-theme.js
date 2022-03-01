@@ -1,6 +1,6 @@
 const html = document.querySelector('html');
 const btnChangeTheme = document.querySelector('#btn-change-theme');
-let btnClicked = false;
+let darkThemeIsActive = false;
 
 const getStyle = (element, style) => window.getComputedStyle(element).getPropertyValue(style);
 
@@ -24,20 +24,19 @@ const changeColors = (colors) => {
 
 btnChangeTheme.addEventListener('click', () => {
 
-    if(!btnClicked) {
-        changeColors(darkTheme);
-        btnChangeTheme.classList.add('fa-moon');
-        btnChangeTheme.classList.remove('fa-sun');
-        btnClicked = true;
-        
+    if(!darkThemeIsActive) {
+        changeColors(darkTheme)
+        btnChangeTheme.classList.toggle('fa-moon');
+        btnChangeTheme.classList.toggle('fa-sun');
+        darkThemeIsActive = true;
+
     } else {
-        changeColors(ligthTheme);
-        btnChangeTheme.classList.add('fa-sun');
-        btnChangeTheme.classList.remove('fa-moon');
-        btnClicked = false;
+        changeColors(ligthTheme)
+        btnChangeTheme.classList.toggle('fa-sun');
+        btnChangeTheme.classList.toggle('fa-moon');
+        darkThemeIsActive = false;
     }
     
-   
 });
 
 
