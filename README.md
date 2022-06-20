@@ -21,4 +21,4 @@
 
 # 🔎 Confira
 Você pode confirar o resultado desse projeto através do link: <br/>
-👉🏼 https://lucasmorais1998.github.io/DevChallenge-Amazing-Graph/
+👉🏼 [https://lucasmorais1998.github.io/devChallenge-Amazing-Graph/](https://devmorais.me/dev-challenge-amazing-graph/)
